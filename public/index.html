@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FaiLuk</title>
+    <link rel="icon" href="http://drive.google.com/uc?export=view&id=1LcPntpoHN9jp4Ydoe5s7JjAwqM2diYvw" type="image">
+
+    <!-- connect css to html -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- download font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Prompt&display=swap" rel="stylesheet">
+
+    <!-- icon-add-->
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- icon-delete -->
+    <!-- <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+
+    <!-- icon-edit -->
+    <!-- <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+  </head>
+
+  <!-- side bar : https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp -->
+
+  <!-- inline form : https://www.w3schools.com/howto/howto_css_inline_form.asp -->
+
+  <!-- web :  https://www.w3schools.com/howto/tryhow_make_a_website.htm -->
+  
+  <body>
+    <!-- header -->
+    <div class="header-row">
+      <div class="brand-icon">
+        <img class="img-brand"
+          width="150px"
+          height="150px"
+          src="http://drive.google.com/uc?export=view&id=1LcPntpoHN9jp4Ydoe5s7JjAwqM2diYvw"
+          alt="Failuk-Logo tee tum mai wai"
+        />
+      </div>
+
+      <div class="text-header">
+        <p class="brand-name">FaiLuk</p>
+        <p class="brand-description">จงปลุกไฟ (ทำการบ้าน) ในตัวคุณ</p>
+      </div>
+    </div>
+
+    <!-- content -->
+    <div class="container">
+      <!-- menu ด้านข้าง -->
+      
+        <div class="side-bar">
+          <p class="topic">Topic</p>
+          <ul>
+            <li>
+              <a href="#" class="go-to-topic">Adding Schedule</a>
+            </li>
+            <li>
+              <a href="#Homework" class="go-to-topic">Homework</a>
+            </li>
+            <li>
+              <a href="#Exam" class="go-to-topic">Exam</a>
+            </li>
+          </ul>
+        </div>
+      
+
+      <!-- <div style="margin-left: 25%"></div> -->
+      <div class="main-row">
+        <!-- main-body -->
+        <div class="main">
+          <p class="text-main">เรามาช่วยเพิ่มตารางกันเถอะ ✊</p>
+          <form id="myForm" class="form-container">
+            <div class="select-button">
+              <span>Select your choice : </span>
+              <button type="button" id="homework-button">Homework</button>
+              <span> or </span>
+              <button type="button" id="exam-button">Exam</button>
+            </div>
+            <div class="add-inform">
+              <input type="text" class="input-form" id="date" name="date" placeholder="Date" onfocus="(this.type='date')" required />
+              <input type="text" class="input-form" id="time" name="time" placeholder="Time" onfocus="(this.type='time')" required />
+              <!-- <label>Subject</label> -->
+              <input
+                class="input-form"
+                name="subject"
+                type="text" id="subject"
+                placeholder="Subject"
+                required />
+              <!-- <label>Title</label> -->
+              <input
+                class="input-form"
+                name="title" id="title"
+                type="text"
+                placeholder="Tittle"
+                required />
+              <button type="submit" id="add-icon" class="material-symbols-outlined">
+                add_circle
+              </button> <br>
+              <!-- <label>Description</label> -->
+              <textarea
+                class="input-form"
+                id="description-text"
+                name="description-text"
+                type="text"
+                placeholder="Description" required
+              /></textarea>
+              <div>
+                <button type="submit" id="add-icon-specific">+</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="main-to-do-list">
+          <p id="Homework" class="text-homework">Homework</p>
+          <table class="table">
+            <colgroup>
+              <col class="th-date" />
+              <col class="th-time" />
+              <col class="th-subject" />
+              <col class="th-title" />
+              <col class="th-description" />
+              <col class="th-more" />
+            </colgroup>
+            <tr class="table-header">
+              <th class="th-date">Date</th>
+              <th class="th-time">Time</th>
+              <th class="th-subject">Subject</th>
+              <th class="th-title">Title</th>
+              <th class="th-description">Description</th>
+              <th class="th-more"></th>
+            </tr>
+            <tbody id="homework-list"></tbody>
+          </table>
+        </div>
+
+        <div class="main-to-do-list">
+          <p id="Exam" class="text-exam">Exam</p>
+          <table class="table">
+            <colgroup>
+              <col class="th-date" />
+              <col class="th-time" />
+              <col class="th-subject" />
+              <col class="th-title" />
+              <col class="th-description" />
+              <col class="th-more" />
+            </colgroup>
+            <tr class="table-header">
+              <th class="th-date">Date</th>
+              <th class="th-time">Time</th>
+              <th class="th-subject">Subject</th>
+              <th class="th-title">Title</th>
+              <th class="th-description">Description</th>
+              <th class="th-more"></th>
+            </tr>
+
+            <tbody id="exam-list"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+      <p id="Credit" class="text-footer">พัฒนาโดย : FaiLuk Jing Jing</p>
+    </div>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
